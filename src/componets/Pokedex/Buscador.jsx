@@ -36,7 +36,7 @@ const Buscador = ({setestado, setfirst, setarra }) => {
                 for (let index = 0; index <= final; index++) {
                     arr.push(mundos?.pokemon?.[index]?.pokemon)
                 }
-                console.log(arr);
+                setarra(arr);
             }
         }, [mundos])
         
