@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Protectpag from './pages/Protectpag'
 import Pokedex from './pages/Pokedex'
+import Stats from './pages/Stats'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route element={<Protectpag />}>
           <Route path='/pokedex' element={<Pokedex />} />
-
+          <Route path='/stats'element={<Stats/>} />
         </Route>
       </Routes>
     </div>

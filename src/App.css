@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+button{
+    cursor: pointer;
+}
+select{
+    cursor: pointer;
+}
 .tarjet{
     width: 300px;
     height: 400px;
@@ -26,6 +32,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1rem;
+    top: 100px;
 }
 .aden{
     width: 280px;
@@ -63,6 +70,7 @@
 .grass{
     background: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%);
 }
+
 
 .fire{
     background: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%);
@@ -114,13 +122,19 @@
 .dark{
     background: linear-gradient(176.37deg, #3a1011 -32.26%, #4c4543 22.55%, #141414 125.72%);
 }
+.steel{
+    background: linear-gradient(176.37deg, #6c5252 -32.26%, #4c4543 22.55%, #edbbbb 125.72%);
+}
+.ice{
+    background: linear-gradient(179.57deg, #9db6d5 -70.14%, #548fd7 56.16%, #2a7ee6 214.85%);
+}
 
 .arr{
     position: fixed;
     width: 100%;
     height: 80px;
     background-color: rgb(225, 17, 17);
-    z-index: 2;
+    z-index: 2000;
 }
 .ne{
     position: absolute;
@@ -162,35 +176,104 @@
     color: white;
 }
 .slider{
-    max-width: 800px;
+    max-width: 700px;
     display: flex;
     position: relative;
-    top: 110px;
+    top: 200px;
     overflow: hidden;
     scroll-behavior:smooth;
     gap: 0.5rem;
+
 }
 .control{
     position: absolute;
     cursor: pointer;
     object-fit: cover;
     padding: 10px;
+    display: inline-block;
 }
 
 .cont{
+    max-width: 520px;
     height: 300px;
     position: relative;
-    left: 300px;
+    left: 400px;
     bottom: -30px;  
 
 }
 .prev{
-    left: -25px;
-    top: 135px;
+    position: absolute;
+    top:225px;
+    left: -20px;
     transform: translate(-50%, -50% );
 }
 .next{
-    right:460px;
-    top: 135px;
+    position: absolute;
+    top:225px;
+    right: -100px;
     transform: translate(-50%, -50% );
+}
+.pokedex{
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    left: 40px;
+}
+.entre{
+    position: relative;
+    top: 120px;
+    left: 40px;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+.tex{
+position: relative;
+top: 3px;
+}
+.ent{
+    color: red;
+}
+.bpo{
+    position: relative;
+    top: 150px;
+    left: 40px;
+    z-index: 1000;
+}
+.dat{
+    width: 500px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+}
+.btn2{
+    width: 200px;
+    height: 40px;
+    position: relative;
+    top: -0.5px;
+    border-color: transparent;
+    background-color: red;
+    font-size: 1.2rem;
+    color: white;
+}
+.z{
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background-color: red;
+}
+.tarj{
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 350px;
+    font-size: 1.7rem;
+
+}
+.d{
+    color: red;
 }

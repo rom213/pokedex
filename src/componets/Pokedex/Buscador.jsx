@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './buscador.css'
 
-const Buscador = ({setestado, setfirst, setarra }) => {
+const Buscador = ({setestado, setfirst, setarra,setuno }) => {
     const [type, settype] = useState()
     const [sec, setsec] = useState()
     
@@ -47,16 +47,19 @@ const Buscador = ({setestado, setfirst, setarra }) => {
         e.preventDefault()
         if (e.target.value==='all') {
             setestado(true)
+            setestado(false)
             setfirst('all')
+            setuno(true)
         }else{
+            setuno(false)
             setestado(false)
             setsec(e.target.value)
         }
     }
   return (
     <div>
-        <div className='co'>
-            <select onChange={handlechange}>
+        <div>
+            <select  className='co' onChange={handlechange}>
                 <option value="all">all</option>
                 {
                     type?.results?.map(types=>{

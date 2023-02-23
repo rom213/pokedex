@@ -1,0 +1,74 @@
+.contentred{
+    position: absolute;
+    margin: -30px auto;
+    background-color: red;
+    width: 100%;
+    height: 120px;
+
+}
+.contentblack{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+.circ{
+    position: absolute;
+    top: -40px;
+    background-color: black;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    right: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adent{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pok{
+    height: 100px;
+    width: 600px;
+}
+.pod{
+    margin: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 1rem;   
+}
+.hi{
+    font-size: 2.9rem;
+    color: red;
+}
+.to{
+font-size: 2rem;
+}
+.r{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+
+.inputt{
+    width: 400px;
+    height: 40px;
+    padding-left: 0.5rem;
+    font-size: 1.4rem;
+}
+.btn3{
+    position: relative;
+    top: -3px;
+    width: 200px;
+    height: 40px;
+    background-color: red;
+    border-color: transparent;
+}

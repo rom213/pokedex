@@ -1,14 +1,24 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import '../../App.css'
+import { setarraypoke } from '../../store/slices/array.slice'
 const Pokemon = ({url}) => {
     const [poke, setpoke] = useState()
     const [habi, sethabi] = useState()
+    const [error, seterror] = useState(false)
+
+    const dispatch= useDispatch()
+    const navigate=useNavigate()
+    
     useEffect(() => {
         axios.get(url)
-            .then(res=> setpoke(res.data))
-            .catch(err=>console.log(err))
-    }, [])
+            .then(res=> {setpoke(res.data)
+            seterror(false)})
+           .catch(err=>seterror(true))
+    }, [url])
+
     useEffect(() => {
      if (poke) {
         if(poke.types.length===1){
@@ -19,11 +29,25 @@ const Pokemon = ({url}) => {
      }
     }, [poke])
 
+    const handleclick=()=>{
+        dispatch(setarraypoke(poke))
+        navigate('/stats')
+    }
+
   return (
-    <div className={`tarjet ${poke?.types[0].type.name}`}>
+    <div>
+    {
+        error ?
+        <div className='tarj'>
+        <h1 className='d'>No results </h1>
+        <h2>look for another pokemon</h2>
+
+        </div>
+        :
+    <div onClick={handleclick} className={`tarjet ${poke?.types[0].type.name}`}>
     <div className={`aden`}>
     <div className={`sec2 ${poke?.types[0].type.name}`}> 
-    <img className='img1' src={poke?.sprites.other.home.front_shiny} alt="" />
+    <img className='img1' src={poke?.sprites.other.home.front_default} alt="" />
         <div className='s'>
         <h3>{poke?.name}</h3>
         { habi ?
@@ -54,6 +78,8 @@ const Pokemon = ({url}) => {
     </div>
 
     </div>
+    </div>
+}
     </div>
   )
 }
