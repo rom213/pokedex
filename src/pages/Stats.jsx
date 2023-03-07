@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import '../App.css'
 import './stats.css'
+import img from '../assets/image12.png'
 
 const Stats = () => {
     const {arraypoke}=useSelector(state=>state)
@@ -21,7 +22,7 @@ const Stats = () => {
   return (
     <div>
               <div className='arr'>
-                <img className='pokedex' src="https://s3-alpha-sig.figma.com/img/ca59/d9ce/98042af437fdff212d3259040db2e2db?Expires=1677456000&Signature=Bf~9YWfdyaygeJZfR~jmeOnzjsTWh22HeHuKTeqN~CGvV7~oK7oFYsceY4pQ0nA1eVKp-gTAwyqx5eenbDffD30pyCWkDPvqizMPT0Z2~sFSEbyOim2qu8mZR0dTXZUUHGQGRTpZAL-Ra~zTjrgh~mNIUb-w~9ndyMYP9mdLOQOAn~vKF8djfcjmYKCVjNDwTYRZ3yhNpYLfBzstr05ZMSfLD50rOtxpju2OZHqukI~ysvi-ZD8~c1HiLPahXVcXOAdbMop2u7dQJABGlYwAf5K68X~wh8qIpH0fyDk~WDnpnRYySK7PX8XeOWFkSKzYsA86lV0Vo6dl6Y1zRPL2sA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="" />
+                <img className='pokedex' src={`${img}`} alt="" />
                 <div className='ne'>
                     <div className='circle'>
                         <div className='circle1'>
